@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Songs - OTG Church</title>
+  <link rel="stylesheet" href="style.css">
+  <style>body {background-image: url('https://source.unsplash.com/random/1920x1080/?music,worship');background-size: cover;background-blend-mode: multiply;}</style>
+</head>
+<body>
+<nav class="nav"><a href="index.html">Home</a></nav>
+<section class="info-section">
+  <h2>Songs Library</h2>
+  <input id="search" placeholder="Search songs…">
+  <ul id="list"></ul>
+</section>
+<script>
+const songs = [
+  {id:1,title:"Amazing Grace",lyrics:"Amazing grace…"},
+  {id:2,title:"How Great Is Our God",lyrics:"How great is our God…"}
+];
+function render(filter=""){
+  const list = document.getElementById("list");
+  list.innerHTML = "";
+  songs.filter(s => s.title.toLowerCase().includes(filter))
+       .forEach(s => list.innerHTML += `<li>${s.title}</li>`);
+}
+document.getElementById("search").oninput = e => render(e.target.value.toLowerCase());
+render();
+</script>
+</body>
+</html>

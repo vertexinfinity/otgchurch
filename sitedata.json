@@ -1,0 +1,81 @@
+{
+    "hero": {
+      "pill": "Welcome to OTG Church",
+      "description": "We are a community of believers dedicated to serving God and our neighbors. Join us this Sunday as we worship together."
+    },
+  
+    "serviceTimes": [
+      { "name": "Sunday Worship", "time": "10:30 AM - 1:00 PM" },
+      { "name": "Friday Service", "time": "7:30 PM - 9:00 PM" },
+      { "name": "Saturday Youth Worship", "time": "8:00 PM - 9:00 PM" }
+    ],
+  
+    "location": {
+      "text": "We are located in the heart of the city, easily accessible by public transport. Parking is available.",
+      "address": "OTG Church, (Add your address here)",
+      "googleMapsLink": "https://maps.google.com"
+    },
+  
+    "coreValues": [
+      {
+        "icon": "❤️",
+        "title": "Love God",
+        "description": "We believe in loving God with all our heart, soul, and mind through worship and obedience."
+      },
+      {
+        "icon": "👥",
+        "title": "Love People",
+        "description": "We are committed to loving our neighbors as ourselves and serving our community."
+      },
+      {
+        "icon": "📖",
+        "title": "Make Disciples",
+        "description": "We are dedicated to sharing the Gospel and helping others grow in their faith journey."
+      }
+    ],
+  
+    "sermons": [
+      {
+        "title": "Faith Over Fear",
+        "date": "Latest Sermon",
+        "link": "https://youtube.com"
+      },
+      {
+        "title": "The Power of Prayer",
+        "date": "Recent Sermon",
+        "link": "https://youtube.com"
+      },
+      {
+        "title": "Walking in Purpose",
+        "date": "Recent Sermon",
+        "link": "https://youtube.com"
+      }
+    ],
+  
+    "events": [
+      {
+        "title": "Youth Worship Night",
+        "date": "Saturday 8 PM",
+        "description": "A special youth worship gathering."
+      },
+      {
+        "title": "Prayer Meeting",
+        "date": "Friday 7:30 PM",
+        "description": "Join us for worship and prayer."
+      }
+    ],
+  
+    "give": {
+      "upiId": "otgchurch@upi",
+      "accountName": "OTG Church"
+    },
+  
+    "contact": {
+      "phone": "+91-XXXXXXXXXX",
+      "email": "info@otgchurch.in",
+      "whatsappNumber": "91XXXXXXXXXX"
+    },
+  
+    "footerText": "A place of worship, community, and growth. Join us as we journey together in faith and serve our community with love."
+  }
+  

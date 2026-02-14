@@ -1,0 +1,21 @@
+[
+    {
+      "id": "song1",
+      "title": "Amazing Grace",
+      "category": "Worship",
+      "lyrics": "Amazing grace how sweet the sound...\nThat saved a wretch like me..."
+    },
+    {
+      "id": "song2",
+      "title": "How Great Is Our God",
+      "category": "Praise",
+      "lyrics": "How great is our God...\nSing with me how great is our God..."
+    },
+    {
+      "id": "song3",
+      "title": "Happy Birthday Song (Mahila Mandal)",
+      "category": "Mahila Mandal",
+      "lyrics": "Happy birthday to you...\nGod bless you..."
+    }
+  ]
+  
