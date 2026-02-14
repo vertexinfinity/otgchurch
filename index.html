@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
   <title>OTG Church</title>
-  <meta name="description" content="OTG Church - Faith, Community, Purpose. Join us for worship, prayer and fellowship." />
+  <meta name="description" content="OTG Church - Faith, Community, Purpose." />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+
   <!-- NAVBAR -->
   <header class="navbar">
-    <div class="nav-left">
-      <div class="logo-box">⛪</div>
-      <div class="logo-text">
-        <span class="logo-main">OTG</span>
-        <span class="logo-sub">Church</span>
+    <div class="brand">
+      <div class="brand-icon">⛪</div>
+      <div class="brand-text">
+        <span class="otg">OTG</span>
+        <span class="church">Church</span>
       </div>
     </div>
 
@@ -30,9 +32,10 @@
       <a href="#contact">Contact</a>
     </nav>
 
-    <button class="nav-toggle" id="navToggle">☰</button>
-
-    <a class="donate-btn" href="#give">Donate</a>
+    <div class="nav-right">
+      <button class="menu-btn" id="menuBtn">☰</button>
+      <a class="donate-btn" href="#give">Donate</a>
+    </div>
   </header>
 
   <!-- HERO -->
@@ -48,53 +51,49 @@
         <span class="white">Purpose.</span>
       </h1>
 
-      <p class="hero-desc" id="heroDesc">
-        We are a community of believers dedicated to serving God and our neighbors.
-      </p>
+      <p class="hero-desc" id="heroDesc"></p>
+
+      <div class="hero-times" id="heroTimes"></div>
 
       <div class="hero-buttons">
-        <a class="btn gold-btn" href="#sermons">Watch Live</a>
-        <a class="btn outline-btn" href="#contact">Plan a Visit</a>
+        <a href="#sermons" class="btn gold-btn">Watch Live</a>
+        <a href="#contact" class="btn outline-btn">Plan a Visit</a>
       </div>
     </div>
   </section>
 
-  <!-- SERVICE TIMES -->
+  <!-- SERVICE TIMES 
   <section class="section">
     <div class="card">
       <div class="card-icon">🕒</div>
       <h2>Service Times</h2>
-
       <div id="serviceTimes"></div>
     </div>
   </section>
-
+-->
   <!-- LOCATION -->
   <section class="section">
     <div class="card">
       <div class="card-icon">📍</div>
       <h2>Our Location</h2>
-      <p id="locationText">Loading...</p>
-
-      <div class="location-box">
-        <p id="locationAddress"></p>
-        <a id="directionLink" class="link-arrow" href="#" target="_blank">Get Directions →</a>
-      </div>
+      <p id="locationText"></p>
+      <p class="address" id="locationAddress"></p>
+      <a class="gold-link" id="directionLink" href="#" target="_blank">Get Directions →</a>
     </div>
   </section>
 
   <!-- NEW HERE -->
   <section class="section">
-    <div class="cta-card">
+    <div class="cta">
       <h2>New Here?</h2>
-      <p id="newHereText">We’d love to meet you!</p>
-      <a class="btn white-btn" href="#contact">Plan Your Visit</a>
+      <p id="newHereText"></p>
+      <a href="#contact" class="btn white-btn">Plan Your Visit</a>
     </div>
   </section>
 
   <!-- CORE VALUES -->
   <section class="section" id="values">
-    <div class="center-title">
+    <div class="section-title">
       <h2>Our Core Values</h2>
       <div class="underline"></div>
       <p>The principles that guide our community and mission.</p>
@@ -105,7 +104,7 @@
 
   <!-- SERMONS -->
   <section class="section" id="sermons">
-    <div class="center-title">
+    <div class="section-title">
       <h2>Latest Sermons</h2>
       <div class="underline"></div>
       <p>Watch our recent sermons and grow in the Word.</p>
@@ -116,19 +115,17 @@
 
   <!-- SONGS -->
   <section class="section" id="songs">
-    <div class="center-title">
+    <div class="section-title">
       <h2>Songs & Lyrics</h2>
       <div class="underline"></div>
-      <p>Search songs, view lyrics, and share links with others.</p>
+      <p>Search songs, view lyrics, and share them.</p>
     </div>
 
-    <div class="song-search">
-      <input type="text" id="songSearchInput" placeholder="Search song title or lyrics..." />
-    </div>
+    <input class="search" id="songSearchInput" placeholder="Search song title or lyrics..." />
 
     <div class="grid" id="songsList"></div>
 
-    <div class="song-view" id="songView" style="display:none;">
+    <div class="song-view" id="songView">
       <h3 id="songTitle"></h3>
       <pre id="songLyrics"></pre>
       <button class="btn gold-btn" id="copySongLink">Copy Share Link</button>
@@ -137,10 +134,10 @@
 
   <!-- EVENTS -->
   <section class="section" id="events">
-    <div class="center-title">
-      <h2>Upcoming Events</h2>
+    <div class="section-title">
+      <h2>Events</h2>
       <div class="underline"></div>
-      <p>Join us for special events and fellowship.</p>
+      <p>Upcoming church events.</p>
     </div>
 
     <div class="grid" id="eventsList"></div>
@@ -148,32 +145,31 @@
 
   <!-- PRAYER -->
   <section class="section" id="prayer">
-    <div class="center-title">
+    <div class="section-title">
       <h2>Prayer Request</h2>
       <div class="underline"></div>
-      <p>Submit your prayer request. We will pray for you.</p>
+      <p>Send us your prayer request.</p>
     </div>
 
     <form class="form" id="prayerForm">
-      <input type="text" placeholder="Name" required />
-      <input type="email" placeholder="Email" required />
-      <input type="text" placeholder="Phone" />
+      <input placeholder="Name" required />
+      <input placeholder="Email" type="email" required />
+      <input placeholder="Phone" />
       <textarea placeholder="Prayer Request" required></textarea>
-      <button class="btn gold-btn" type="submit">Submit Request</button>
-      <p id="prayerSuccess" class="success-msg"></p>
+      <button class="btn gold-btn" type="submit">Submit</button>
+      <p class="success" id="prayerSuccess"></p>
     </form>
   </section>
 
   <!-- GIVE -->
   <section class="section" id="give">
-    <div class="center-title">
+    <div class="section-title">
       <h2>Give</h2>
       <div class="underline"></div>
-      <p>Support the ministry through your giving.</p>
+      <p>Support OTG Church through your giving.</p>
     </div>
 
     <div class="card">
-      <h3>UPI Donation</h3>
       <p><b>UPI ID:</b> <span id="upiId"></span></p>
       <p><b>Account Name:</b> <span id="accountName"></span></p>
     </div>
@@ -181,33 +177,24 @@
 
   <!-- CONTACT -->
   <section class="section" id="contact">
-    <div class="center-title">
+    <div class="section-title">
       <h2>Contact</h2>
       <div class="underline"></div>
-      <p>Get in touch with us.</p>
+      <p>We would love to connect with you.</p>
     </div>
 
     <div class="card">
       <p><b>Phone:</b> <span id="contactPhone"></span></p>
       <p><b>Email:</b> <span id="contactEmail"></span></p>
-      <p><b>WhatsApp:</b> <a id="whatsappLink" href="#" target="_blank">Message Us</a></p>
+      <p><b>WhatsApp:</b> <a id="whatsappLink" target="_blank">Message Us</a></p>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-left">
-      <h3>OTG Church</h3>
-      <p id="footerText"></p>
-    </div>
-
-    <div class="footer-right">
-      <h4>Quick Links</h4>
-      <a href="#home">Home</a>
-      <a href="#sermons">Sermons</a>
-      <a href="#songs">Songs</a>
-      <a href="#contact">Contact</a>
-    </div>
+    <h3>OTG Church</h3>
+    <p id="footerText"></p>
+    <p class="copyright">© 2026 OTG Church</p>
   </footer>
 
   <script src="script.js"></script>
